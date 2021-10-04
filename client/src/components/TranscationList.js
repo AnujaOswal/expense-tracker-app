@@ -4,12 +4,12 @@ import { Transaction} from './Transaction';
 
 const TranscationList = () => {
   const { transactions,  getTransactions } = useContext(GlobalContext);
-console.log(GlobalContext)
+//console.log(GlobalContext)
   //we use useEffect when we make http request from a component
  
   useEffect(() => {
     console.log(transactions)
-   // getTransactions()
+    getTransactions()
     // console.log( getTransactions());
      // eslint-disable-next-line
   },[]) //it will run only once

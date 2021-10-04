@@ -11,7 +11,7 @@ import {GlobalProvider} from './context/GlobalState';
 function App() {
   return (
     <div>
-    <GlobalProvider/>
+    <GlobalProvider>
       <Header/>
       <div className="conatiner">
         {/* displaying balance */}
@@ -23,7 +23,7 @@ function App() {
         {/* adding new transcation expense */}
         <AddTransaction />
       </div>
-      <GlobalProvider/>
+      </GlobalProvider>
     </div>
   );
 }

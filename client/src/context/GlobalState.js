@@ -21,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
   //Actions
   const getTransactions = async () => {
     try {
-      const res = await axios.get("/api/v1/transactions");
+      const res = await axios.get("/api/v1/transaction");
       // we do need to include the --prefix  i.e http://localhost:5000
       //coz we added it in the proxy in package.json file
       dispatch({
@@ -39,7 +39,7 @@ export const GlobalProvider = ({ children }) => {
 
   const deleteTransaction = async (id) => {
     try {
-      await axios.delete(`/api/v1/transactions/${id}`);
+      await axios.delete(`/api/v1/transaction/${id}`);
       // here axios will send the req to delete the transaction of particular id
       //to mongoDB through backend so that it'll get remove from database as well
       dispatch({
@@ -63,7 +63,7 @@ export const GlobalProvider = ({ children }) => {
 
     try {
       const res = await axios.post(
-        "/api/v1/transactions/",
+        "/api/v1/transaction/",
         transaction,
         config
       );
